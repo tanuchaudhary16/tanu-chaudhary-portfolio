@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Experience() {
+
   return (
 
     <section
@@ -63,7 +65,6 @@ export default function Experience() {
 
         </p>
 
-
         <motion.div
 
           initial={{
@@ -114,7 +115,6 @@ export default function Experience() {
             "
           ></div>
 
-
           <div className="flex flex-wrap items-center gap-4">
 
             <span
@@ -144,7 +144,6 @@ export default function Experience() {
 
           </div>
 
-
           <h2
             className="
             text-3xl
@@ -156,12 +155,12 @@ export default function Experience() {
           >
 
             Google Generative AI
+
             <span className="text-red-500">
               {" "}Virtual Internship
             </span>
 
           </h2>
-
 
           <p
             className="
@@ -173,6 +172,33 @@ export default function Experience() {
             AICTE | Google for Developers
           </p>
 
+          {/* CERTIFICATE BUTTON */}
+          <a
+            href="https://aictecert.eduskillsfoundation.org/pages/home/verify.php?cert=3d844cdcd68589b2dba55cb71b06e86b"
+            target="_blank"
+            rel="noreferrer"
+            className="
+            inline-flex
+            items-center
+            gap-3
+            mt-8
+            bg-red-500
+            hover:bg-black
+            text-white
+            px-6
+            py-3
+            rounded-2xl
+            font-semibold
+            shadow-lg
+            duration-300
+            "
+          >
+
+            View Internship Certificate
+
+            <FaExternalLinkAlt />
+
+          </a>
 
           <div
             className="
@@ -207,7 +233,6 @@ export default function Experience() {
 
             </div>
 
-
             <div className="bg-gray-50 rounded-2xl p-6">
 
               <h3 className="font-bold text-lg mb-3">
@@ -239,4 +264,5 @@ export default function Experience() {
     </section>
 
   );
+
 }
