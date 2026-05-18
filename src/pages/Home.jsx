@@ -8,51 +8,63 @@ import { TypeAnimation } from "react-type-animation";
 export default function Home() {
   return (
     <div
-      className="mt-20 bg-gradient-to-br from-pink-50 via-white to-pink-100 text-black min-h-screen"
       id="home"
+      className="mt-20 min-h-screen bg-gradient-to-b from-white via-gray-50 to-white text-black"
     >
-      <div className="flex justify-between py-10 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse gap-10">
+      <div className="flex justify-between py-16 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse gap-12">
 
-        {/* LEFT */}
         <motion.div
-          className="lg:w-[45%]"
-          initial={{ opacity: 0, x: -50 }}
+          className="lg:w-[48%]"
+          initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
 
           <motion.div
-            className="text-2xl lg:text-5xl flex flex-col mt-8 lg:mt-0 gap-3 lg:gap-6"
+            className="flex flex-col gap-5"
             initial="hidden"
             animate="visible"
             variants={{
-              hidden: { opacity: 0, y: 20 },
+              hidden: { opacity: 0 },
               visible: {
                 opacity: 1,
-                y: 0,
-                transition: { staggerChildren: 0.2 },
-              },
+                transition: {
+                  staggerChildren: .2
+                }
+              }
             }}
           >
 
-            <motion.h2
+            <motion.div
               variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1 },
+                hidden:{opacity:0},
+                visible:{opacity:1}
               }}
-              className="text-xl lg:text-3xl"
+            >
+              <span className="bg-red-50 text-red-500 px-5 py-2 rounded-full text-sm font-semibold">
+                MCA Student • Software Engineer
+              </span>
+            </motion.div>
+
+
+            <motion.h2
+              className="text-xl lg:text-3xl font-medium"
+              variants={{
+                hidden:{opacity:0},
+                visible:{opacity:1}
+              }}
             >
               Hello, I'm{" "}
-              <span className="text-pink-500 font-extrabold">
+              <span className="text-red-500 font-black">
                 <TypeAnimation
                   sequence={[
                     "Tanu Chaudhary",
                     1500,
-                    "Software Engineer",
-                    1500,
                     "Backend Developer",
                     1500,
                     "Problem Solver",
+                    1500,
+                    "Software Engineer",
                     1500,
                   ]}
                   speed={40}
@@ -61,148 +73,186 @@ export default function Home() {
               </span>
             </motion.h2>
 
+
             <motion.h1
-              className="font-extrabold text-black text-4xl lg:text-6xl leading-tight"
+              className="font-black text-5xl lg:text-7xl leading-tight"
               variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1 },
+                hidden:{opacity:0},
+                visible:{opacity:1}
               }}
             >
-              Building Scalable
-              <span className="text-pink-500"> Software Solutions</span>
+              Building Modern
+              <span className="text-red-500">
+                {" "}Software
+              </span>
+              <br />
+              Solutions
             </motion.h1>
 
+
             <motion.h2
-              className="text-lg lg:text-2xl text-gray-700"
+              className="text-lg lg:text-2xl text-gray-600"
               variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1 },
+                hidden:{opacity:0},
+                visible:{opacity:1}
               }}
             >
-              MCA Student at{" "}
-              <span className="font-extrabold text-pink-500">
-                VIT Chennai
-              </span>
+              MCA @ VIT Chennai (2025–2027)
             </motion.h2>
 
           </motion.div>
 
+
           <motion.p
-            className="text-gray-500 text-sm lg:text-base mt-6 leading-relaxed"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            className="text-gray-500 text-base mt-8 leading-8"
+            initial={{ opacity:0 }}
+            animate={{ opacity:1 }}
+            transition={{ delay:.5 }}
           >
             Passionate Software Engineer with strong foundations in
-            Data Structures, Algorithms, OOP, DBMS, and System Design.
-            Experienced in building scalable backend systems, REST APIs,
-            and full-stack applications while solving real-world
-            problems through technology.
+            Data Structures, Algorithms, OOP, DBMS and System Design.
+            Experienced in backend systems, REST APIs, full-stack
+            applications and solving real-world problems through technology.
           </motion.p>
 
-          {/* BUTTONS */}
+
+
           <motion.div
-            className="flex gap-5 mt-8 flex-wrap"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
+            className="flex gap-5 mt-10 flex-wrap"
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            transition={{delay:.7}}
           >
 
             <a
               href="/ResumeSE.pdf"
-              download
-              className="bg-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 hover:shadow-lg hover:bg-pink-600 duration-300"
+              download="Tanu_Chaudhary_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+              bg-red-500
+              hover:bg-red-600
+              text-white
+              px-8
+              py-4
+              rounded-2xl
+              font-semibold
+              shadow-lg
+              duration-300
+              hover:scale-105
+              "
             >
               Download Resume
             </a>
 
+
             <a
               href="#projects"
-              className="border border-pink-500 text-pink-500 px-6 py-3 rounded-xl font-semibold hover:bg-pink-500 hover:text-white hover:scale-105 duration-300"
+              className="
+              border-2
+              border-gray-300
+              px-8
+              py-4
+              rounded-2xl
+              font-semibold
+              hover:border-red-500
+              hover:text-red-500
+              duration-300
+              "
             >
               View Projects
             </a>
 
-            <a
-              href="#contact"
-              className="border border-pink-300 px-6 py-3 rounded-xl font-semibold hover:border-pink-500 hover:text-pink-500 hover:scale-105 duration-300"
-            >
-              Contact Me
-            </a>
-
           </motion.div>
 
-          {/* SOCIAL ICONS */}
+
           <motion.div
-            className="flex items-center gap-x-5 mt-10 lg:mt-14"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
+            className="flex gap-5 mt-12"
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            transition={{delay:.9}}
           >
 
-            <motion.a
+            <a
               href="mailto:tanu10162005@gmail.com"
-              className="border border-pink-200 p-3 rounded-full text-pink-500 bg-white shadow-md"
-              whileHover={{
-                scale: 1.1,
-                borderColor: "#ec4899",
-                color: "#ec4899",
-              }}
+              className="
+              p-4
+              bg-white
+              rounded-full
+              shadow-lg
+              border
+              hover:scale-110
+              hover:text-red-500
+              duration-300
+              "
             >
-              <BiLogoGmail className="w-5 h-5" />
-            </motion.a>
+              <BiLogoGmail size={24}/>
+            </a>
 
-            <motion.a
+
+            <a
               href="https://www.linkedin.com/in/tanuchaudhary16/"
               target="_blank"
               rel="noreferrer"
-              className="border border-pink-200 p-3 rounded-full text-pink-500 bg-white shadow-md"
-              whileHover={{
-                scale: 1.1,
-                borderColor: "#ec4899",
-                color: "#ec4899",
-              }}
+              className="
+              p-4
+              bg-white
+              rounded-full
+              shadow-lg
+              border
+              hover:scale-110
+              hover:text-red-500
+              duration-300
+              "
             >
-              <IoLogoLinkedin className="w-5 h-5" />
-            </motion.a>
+              <IoLogoLinkedin size={24}/>
+            </a>
 
-            <motion.a
+
+            <a
               href="https://github.com/tanuchaudhary16"
               target="_blank"
               rel="noreferrer"
-              className="border border-pink-200 p-3 rounded-full text-pink-500 bg-white shadow-md"
-              whileHover={{
-                scale: 1.1,
-                borderColor: "#ec4899",
-                color: "#ec4899",
-              }}
+              className="
+              p-4
+              bg-white
+              rounded-full
+              shadow-lg
+              border
+              hover:scale-110
+              hover:text-red-500
+              duration-300
+              "
             >
-              <BsGithub className="w-5 h-5" />
-            </motion.a>
+              <BsGithub size={24}/>
+            </a>
 
           </motion.div>
 
         </motion.div>
 
-        {/* RIGHT IMAGE */}
+
+
         <motion.div
-          className="lg:w-[55%] w-full flex justify-center items-center"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{
-            opacity: 1,
-            x: 0,
-            y: [0, -10, 0],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-          }}
+          className="lg:w-[52%] flex justify-center"
+          initial={{ opacity:0,x:50 }}
+          animate={{ opacity:1,x:0 }}
+          transition={{ duration:1 }}
         >
+
           <img
-            className="h-[350px] lg:h-[600px] w-auto object-contain drop-shadow-2xl"
             src="/assets/Anime.gif"
-            alt="Anime Girl"
+            alt="anime"
+            className="
+            h-[350px]
+            lg:h-[650px]
+            object-contain
+            drop-shadow-2xl
+            select-none
+            pointer-events-none
+            "
           />
+
         </motion.div>
 
       </div>

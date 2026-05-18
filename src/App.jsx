@@ -9,12 +9,10 @@ import Experience from './components/Experience'
 import Education from './components/Education'
 import Achievements from './components/Achievements'
 import Contact from './components/Contact'
-import CustomCursor from './utils/CursorAnimation'
 
 export default function App() {
   return (
     <div className='font-sora overflow-x-hidden'>
-      <CustomCursor />
 
       <Navbar />
 

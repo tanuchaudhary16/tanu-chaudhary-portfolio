@@ -10,221 +10,456 @@ import { FaPhone } from "react-icons/fa6";
 
 export default function Contact() {
 
-  const ref = useRef(null);
+const ref=useRef(null);
 
-  const form = useRef();
+const form=useRef();
 
-  const isInView = useInView(ref, {
-    once: true,
-    amount: 0.2,
-  });
+const isInView=useInView(ref,{
+once:true,
+amount:.2
+});
 
-  const [successMessage, setSuccessMessage] = useState("");
+const [successMessage,setSuccessMessage]=useState("");
 
-  const sendEmail = (e) => {
+const sendEmail=(e)=>{
 
-    e.preventDefault();
+e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_r8x1ep8",
-        "template_b1p5kzc",
-        form.current,
-        "tW2CWhqMtbP1dExeK"
-      )
-      .then(
-        () => {
-          setSuccessMessage("Message Sent Successfully 💖");
-          form.current.reset();
-        },
-        () => {
-          setSuccessMessage("Failed To Send Message ❌");
-        }
-      );
-  };
+emailjs
+.sendForm(
+"service_r8x1ep8",
+"template_b1p5kzc",
+form.current,
+"tW2CWhqMtbP1dExeK"
+)
 
-  return (
+.then(
+()=>{
 
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 0.8 }}
-      className="lg:my-20 my-10 lg:px-28 px-5 py-10"
-      id="contact"
-    >
+setSuccessMessage(
+"Message sent successfully 🚀"
+);
 
-      {/* TITLE */}
-      <motion.h2
-        initial={{ y: -50, opacity: 0 }}
-        animate={isInView ? { y: 0, opacity: 1 } : { opacity: 0 }}
-        className="text-3xl lg:text-5xl text-center mb-14 font-bold"
-      >
-        Contact{" "}
-        <span className="text-pink-500 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
-          Me
-        </span>
-      </motion.h2>
+form.current.reset();
 
-      <div className="flex justify-between items-center flex-col lg:flex-row gap-14">
+},
 
-        {/* LEFT FORM */}
-        <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { opacity: 0 }}
-          className="lg:w-[45%] w-full"
-        >
+()=>{
 
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            className="space-y-5 bg-white/70 backdrop-blur-lg border border-pink-200 shadow-xl rounded-3xl p-8"
-          >
+setSuccessMessage(
+"Message failed to send ❌"
+);
 
-            <input
-              className="bg-white border border-pink-200 px-5 py-4 rounded-2xl w-full text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
-              type="text"
-              name="from_name"
-              placeholder="Your Name"
-              required
-            />
+}
 
-            <input
-              className="bg-white border border-pink-200 px-5 py-4 rounded-2xl w-full text-sm focus:outline-none focus:ring-2 focus:ring-pink-400"
-              type="email"
-              name="from_email"
-              placeholder="Your Email"
-              required
-            />
+);
 
-            <textarea
-              className="bg-white border border-pink-200 px-5 py-4 h-36 rounded-2xl w-full text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none"
-              placeholder="Write your message"
-              name="message"
-              required
-            />
+};
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              type="submit"
-              className="bg-pink-500 hover:bg-pink-600 text-white px-7 py-4 rounded-2xl font-semibold shadow-lg"
-            >
-              Get In Touch
-            </motion.button>
+return(
 
-            {/* SUCCESS MESSAGE */}
-            {successMessage && (
-              <p className="text-pink-500 font-semibold">
-                {successMessage}
-              </p>
-            )}
+<section
+ref={ref}
+id="contact"
+className="
+py-24
+bg-gradient-to-b
+from-white
+via-gray-50
+to-white
+"
+>
 
-            {/* SOCIALS */}
-            <div className="flex gap-5 mt-6">
+<div className="px-5 lg:px-28">
 
-              <motion.a
-                href="mailto:tanu10162005@gmail.com"
-                whileHover={{
-                  scale: 1.2,
-                  color: "#ec4899",
-                }}
-                className="text-pink-500"
-              >
-                <BiLogoGmail className="text-3xl" />
-              </motion.a>
+<motion.h2
+initial={{
+opacity:0,
+y:-20
+}}
 
-              <motion.a
-                href="https://www.linkedin.com/in/tanuchaudhary16/"
-                target="_blank"
-                rel="noreferrer"
-                whileHover={{
-                  scale: 1.2,
-                  color: "#ec4899",
-                }}
-                className="text-pink-500"
-              >
-                <IoLogoLinkedin className="text-3xl" />
-              </motion.a>
+animate={
+isInView
+?
+{
+opacity:1,
+y:0
+}
+:
+{}
+}
 
-              <motion.a
-                href="https://github.com/tanuchaudhary16"
-                target="_blank"
-                rel="noreferrer"
-                whileHover={{
-                  scale: 1.2,
-                  color: "#ec4899",
-                }}
-                className="text-pink-500"
-              >
-                <BsGithub className="text-3xl" />
-              </motion.a>
+className="
+text-4xl
+lg:text-6xl
+font-black
+text-center
+"
+>
 
-            </div>
+Let's{" "}
 
-          </form>
+<span className="text-red-500">
+Connect
+</span>
 
-        </motion.div>
+</motion.h2>
 
-        {/* RIGHT SIDE */}
-        <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { opacity: 0 }}
-          className="lg:w-[45%]"
-        >
+<div className="w-24 h-1 bg-red-500 rounded-full mx-auto mt-4"></div>
 
-          <h2 className="text-4xl lg:text-6xl font-bold leading-tight">
-            Let's{" "}
-            <span className="text-pink-500">
-              Connect
-            </span>
-          </h2>
+<p
+className="
+text-center
+text-gray-500
+mt-6
+max-w-3xl
+mx-auto
+"
+>
 
-          <p className="text-gray-600 mt-6 text-sm lg:text-base leading-relaxed">
-            I am actively looking for Software Engineering opportunities,
-            internships, and collaborations. Feel free to reach out regarding
-            projects, opportunities, or tech discussions.
-          </p>
+Actively seeking Software Engineering opportunities, internships and collaborations.
 
-          <div className="mt-10 space-y-5 text-sm lg:text-lg">
+</p>
 
-            <motion.a
-              whileHover={{ x: 5 }}
-              href="mailto:tanu10162005@gmail.com"
-              className="flex items-center gap-4 group"
-            >
 
-              <span className="border border-pink-200 p-3 rounded-full bg-white shadow-md group-hover:bg-pink-500 group-hover:text-white transition">
-                <IoMdMail />
-              </span>
+<div className="
+flex
+flex-col
+lg:flex-row
+gap-16
+mt-20
+items-center
+justify-between
+">
 
-              <span className="text-gray-700">
-                tanu10162005@gmail.com
-              </span>
+<motion.div
 
-            </motion.a>
+initial={{
+x:-50,
+opacity:0
+}}
 
-            <motion.a
-              whileHover={{ x: 5 }}
-              href="tel:+916397113386"
-              className="flex items-center gap-4 group"
-            >
+animate={
+isInView
+?
+{
+x:0,
+opacity:1
+}
+:
+{}
+}
 
-              <span className="border border-pink-200 p-3 rounded-full bg-white shadow-md group-hover:bg-pink-500 group-hover:text-white transition">
-                <FaPhone />
-              </span>
+className="w-full lg:w-[48%]"
+>
 
-              <span className="text-gray-700">
-                +91 6397113386
-              </span>
+<form
 
-            </motion.a>
+ref={form}
 
-          </div>
+onSubmit={sendEmail}
 
-        </motion.div>
+className="
+bg-white
+shadow-2xl
+rounded-3xl
+border
+p-8
+space-y-5
+"
 
-      </div>
+>
 
-    </motion.div>
-  );
+<input
+className="
+w-full
+border
+rounded-xl
+px-5
+py-4
+focus:outline-none
+focus:ring-2
+focus:ring-red-400
+"
+type="text"
+name="from_name"
+placeholder="Your Name"
+required
+/>
+
+<input
+className="
+w-full
+border
+rounded-xl
+px-5
+py-4
+focus:outline-none
+focus:ring-2
+focus:ring-red-400
+"
+type="email"
+name="from_email"
+placeholder="Your Email"
+required
+/>
+
+<textarea
+className="
+w-full
+border
+rounded-xl
+px-5
+py-4
+h-36
+resize-none
+focus:outline-none
+focus:ring-2
+focus:ring-red-400
+"
+placeholder="Write your message"
+name="message"
+required
+/>
+
+<motion.button
+whileHover={{
+scale:1.05
+}}
+
+type="submit"
+
+className="
+w-full
+bg-red-500
+hover:bg-red-600
+text-white
+rounded-xl
+py-4
+font-semibold
+shadow-lg
+duration-300
+"
+>
+
+Send Message
+
+</motion.button>
+
+
+{successMessage &&(
+
+<p className="
+font-semibold
+text-red-500
+text-center
+">
+
+{successMessage}
+
+</p>
+
+)}
+
+<div className="
+flex
+justify-center
+gap-6
+pt-4
+">
+
+<motion.a
+href="mailto:tanu10162005@gmail.com"
+whileHover={{scale:1.2}}
+className="text-red-500"
+>
+
+<BiLogoGmail className="text-3xl"/>
+
+</motion.a>
+
+
+<motion.a
+href="https://github.com/tanuchaudhary16"
+target="_blank"
+rel="noreferrer"
+whileHover={{scale:1.2}}
+className="text-red-500"
+>
+
+<BsGithub className="text-3xl"/>
+
+</motion.a>
+
+
+<motion.a
+href="https://www.linkedin.com/in/tanuchaudhary16/"
+target="_blank"
+rel="noreferrer"
+whileHover={{scale:1.2}}
+className="text-red-500"
+>
+
+<IoLogoLinkedin className="text-3xl"/>
+
+</motion.a>
+
+</div>
+
+</form>
+
+</motion.div>
+
+
+<motion.div
+
+initial={{
+x:50,
+opacity:0
+}}
+
+animate={
+isInView
+?
+{
+x:0,
+opacity:1
+}
+:
+{}
+}
+
+className="lg:w-[42%]"
+>
+
+<h2 className="
+text-5xl
+font-black
+leading-tight
+">
+
+Interested in working{" "}
+
+<span className="text-red-500">
+together?
+</span>
+
+</h2>
+
+<p className="
+text-gray-600
+leading-8
+mt-6
+">
+
+Feel free to reach out regarding software engineering roles, internships, collaborations or interesting discussions.
+
+</p>
+
+
+<div className="
+space-y-6
+mt-10
+">
+
+<a
+href="mailto:tanu10162005@gmail.com"
+className="
+bg-white
+border
+shadow-lg
+rounded-2xl
+p-5
+flex
+items-center
+gap-5
+hover:shadow-2xl
+hover:-translate-y-1
+duration-300
+cursor-pointer
+"
+>
+
+<div className="
+bg-red-50
+text-red-500
+p-4
+rounded-full
+">
+
+<IoMdMail/>
+
+</div>
+
+<div>
+
+<p className="font-semibold">
+Email
+</p>
+
+<p className="text-gray-500">
+tanu10162005@gmail.com
+</p>
+
+</div>
+
+</a>
+
+
+
+<a
+href="tel:+916397113386"
+className="
+bg-white
+border
+shadow-lg
+rounded-2xl
+p-5
+flex
+items-center
+gap-5
+hover:shadow-2xl
+hover:-translate-y-1
+duration-300
+cursor-pointer
+"
+>
+
+<div className="
+bg-red-50
+text-red-500
+p-4
+rounded-full
+">
+
+<FaPhone/>
+
+</div>
+
+<div>
+
+<p className="font-semibold">
+Phone
+</p>
+
+<p className="text-gray-500">
++91 6397113386
+</p>
+
+</div>
+
+</a>
+
+</div>
+
+</motion.div>
+
+</div>
+
+</div>
+
+</section>
+
+)
+
 }

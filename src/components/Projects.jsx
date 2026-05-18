@@ -1,215 +1,323 @@
-import React from 'react';
+import React from "react";
 import { TbExternalLink } from "react-icons/tb";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const projects = [
 
-  {
-    id: 1,
-    title: "Real-Time Disaster Monitoring & Response System",
-    description:
-      "Developed scalable backend services using Java, Spring Boot, MySQL and REST APIs for real-time disaster alerts, emergency response handling, and incident management.",
-    image: "/assets/disaster.png",
-    link: "https://github.com/tanuchaudhary16/Real-Time-Disaster-Prediction-and-Response-System-"
-  },
+{
+id:1,
+title:"Smart City Management System",
 
-  {
-    id: 2,
-    title: "Smart City Management System",
-    description:
-      "Built a MERN-based platform for complaint resolution and civic service management with real-time complaint tracking and optimized backend workflows.",
-    image: "/assets/smartcity.png",
-    link: "https://github.com/tanuchaudhary16/smart-city-management-system"
-  },
+description:
+"Built a MERN-based platform for complaint resolution and civic service management with optimized backend workflows and real-time complaint tracking.",
 
-  {
-    id: 3,
-    title: "Crime Prediction System",
-    description:
-      "Developed FastAPI backend pipelines integrated with machine learning models for predictive crime analysis and scalable data processing.",
-    image: "/assets/crime.jfif",
-    link: "https://github.com/tanuchaudhary16/Crime-Prediction-System"
-  },
+stack:["MongoDB","Express","React","Node.js"],
 
-  {
-    id: 4,
-    title: "NeuroNudge",
-    description:
-      "AI-powered recommendation system that understands user facial expressions and mood patterns to recommend suitable activities and personalized actions.",
-    image: "/assets/neuronudge.jfif",
-    link: "https://github.com/tanuchaudhary16/NeuroNudge"
-  },
+image:"/assets/smartcity.png",
 
-  {
-    id: 5,
-    title: "AI Desktop Partner",
-    description:
-      "Intelligent desktop assistant built using AI technologies capable of handling tasks, voice interaction, automation and improving user productivity.",
-    image: "/assets/aidesktop.jfif",
-    link: "https://github.com/tanuchaudhary16/AI-DESKTOP-PARTNER"
-  },
+link:"https://github.com/tanuchaudhary16/smart-city-management-system"
+},
 
-  {
-    id: 6,
-    title: "Human Suspicious Activity Recognition System",
-    description:
-      "Built an AI-based surveillance system capable of identifying suspicious human activities using computer vision and deep learning techniques.",
-    image: "/assets/suspicious.png",
-    link: "#"
-  },
+{
+id:2,
+title:"Human Suspicious Activity Recognition System",
 
-  {
-    id: 7,
-    title: "Amazon Clone",
-    description:
-      "Developed a responsive Amazon-inspired ecommerce interface with product browsing, authentication and shopping features.",
-    image: "/assets/amazon.jpg",
-    link: "https://github.com/tanuchaudhary16/Amazon_Clone"
-  },
+description:
+"Built an AI-powered surveillance system capable of detecting suspicious human activities using computer vision and deep learning techniques.",
 
-  {
-    id: 8,
-    title: "Hangman Game",
-    description:
-      "Interactive Hangman game with clean UI and dynamic word generation built using JavaScript logic and responsive design principles.",
-    image: "/assets/hangman.png",
-    link: "https://github.com/tanuchaudhary16/Hangman-Game"
-  }
+stack:["Python","Computer Vision","Deep Learning"],
+
+image:"/assets/suspicious.png",
+
+link:"#"
+},
+
+{
+id:3,
+title:"Crime Prediction System",
+
+description:
+"Developed FastAPI backend pipelines integrated with machine learning models for predictive crime analysis and scalable data processing.",
+
+stack:["FastAPI","Python","Machine Learning"],
+
+image:"/assets/crime.jfif",
+
+link:"https://github.com/tanuchaudhary16/Crime-Prediction-System"
+},
+
+{
+id:4,
+title:"Real-Time Disaster Monitoring & Response System",
+
+description:
+"Developed scalable backend services for disaster alerts, emergency response coordination and incident handling using Java, Spring Boot and REST APIs.",
+
+stack:["Java","Spring Boot","MySQL","REST APIs"],
+
+image:"/assets/disaster.png",
+
+link:"https://github.com/tanuchaudhary16/Real-Time-Disaster-Prediction-and-Response-System-"
+},
+
+{
+id:5,
+title:"NeuroNudge",
+
+description:
+"AI-powered recommendation system that analyzes user mood patterns and behavior to recommend personalized activities.",
+
+stack:["AI","Machine Learning","Python"],
+
+image:"/assets/neuronudge.jfif",
+
+link:"https://github.com/tanuchaudhary16/NeuroNudge"
+},
+
+{
+id:6,
+title:"AI Desktop Partner",
+
+description:
+"Built an intelligent desktop assistant capable of automation, voice interaction and productivity enhancement.",
+
+stack:["Python","AI"],
+
+image:"/assets/aidesktop.jfif",
+
+link:"https://github.com/tanuchaudhary16/AI-DESKTOP-PARTNER"
+}
 
 ];
 
 export default function Projects() {
 
-  return (
+return (
 
-    <div
-      className="bg-gradient-to-br from-pink-50 via-white to-pink-100 px-5 lg:px-28 py-20 text-black"
-      id="projects"
-    >
+<section
+id="projects"
+className="
+py-24
+bg-gradient-to-b
+from-white
+via-gray-50
+to-white
+"
+>
 
-      {/* TITLE */}
-      <h2 className="text-3xl lg:text-5xl text-center mb-4 font-bold">
+<div className="px-5 lg:px-28">
 
-        My{" "}
+<motion.h2
+className="text-4xl lg:text-6xl font-black text-center"
+initial={{opacity:0,y:-20}}
+whileInView={{opacity:1,y:0}}
+transition={{duration:.6}}
+>
 
-        <span className="text-pink-500 drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
-          Projects
-        </span>
+Featured{" "}
 
-      </h2>
+<span className="text-red-500">
+Projects
+</span>
 
-      {/* SUBTITLE */}
-      <p className="text-center text-gray-600 mb-20 max-w-3xl mx-auto leading-relaxed">
+</motion.h2>
 
-        A collection of software engineering, full-stack development,
-        backend systems and AI-powered applications built through
-        hands-on learning and real-world problem solving.
+<div className="w-24 h-1 bg-red-500 mx-auto mt-4 rounded-full"></div>
 
-      </p>
+<p
+className="
+text-center
+text-gray-500
+mt-6
+max-w-3xl
+mx-auto
+leading-relaxed
+"
+>
 
-      {/* PROJECTS */}
-      <div className="space-y-20">
+Software engineering, AI and full-stack applications
+built through practical development and real-world
+problem solving.
 
-        {projects.map((project, index) => (
+</p>
 
-          <motion.div
-            key={project.id}
-            className={`flex items-center flex-col ${
-              index % 2 === 0
-                ? "lg:flex-row"
-                : "lg:flex-row-reverse"
-            } gap-12`}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: index * 0.15
-            }}
-            viewport={{ once: true }}
-          >
+<div className="space-y-28 mt-20">
 
-            {/* IMAGE */}
-            <div className="
-              lg:w-[520px]
-              w-full
-              rounded-3xl
-              overflow-hidden
-              border border-pink-200
-              shadow-2xl
-              bg-white
-            ">
+{projects.map((project,index)=>(
 
-              <img
-                className="
-                  w-full
-                  h-[280px]
-                  object-cover
-                  transition duration-500
-                  hover:scale-110
-                  hover:brightness-90
-                "
-                src={project.image}
-                alt={project.title}
-              />
+<motion.div
+key={project.id}
 
-            </div>
+className={`flex flex-col items-center gap-10 ${
+index%2===0
+?
+"lg:flex-row"
+:
+"lg:flex-row-reverse"
+}`}
 
-            {/* CONTENT */}
-            <div className="lg:w-1/2 space-y-5">
+initial={{
+opacity:0,
+y:50
+}}
 
-              {/* PROJECT NUMBER */}
-              <h2 className="text-5xl font-extrabold text-pink-500">
+whileInView={{
+opacity:1,
+y:0
+}}
 
-                {String(project.id).padStart(2, "0")}
+transition={{
+duration:.7
+}}
 
-              </h2>
+viewport={{
+once:true
+}}
+>
 
-              {/* TITLE */}
-              <p className="font-bold text-black text-2xl lg:text-3xl leading-snug">
+<div
+className="
+lg:w-[520px]
+overflow-hidden
+rounded-3xl
+bg-white
+shadow-[0_15px_45px_rgba(0,0,0,.08)]
+border
+"
+>
 
-                {project.title}
+<img
+src={project.image}
+alt={project.title}
 
-              </p>
+className="
+h-[320px]
+w-full
+object-cover
+hover:scale-110
+duration-500
+"
+/>
 
-              {/* DESCRIPTION */}
-              <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
+</div>
 
-                {project.description}
 
-              </p>
+<div className="lg:w-1/2">
 
-              {/* BUTTON */}
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  inline-flex items-center gap-2
-                  bg-pink-500
-                  hover:bg-pink-600
-                  text-white
-                  px-5 py-3
-                  rounded-2xl
-                  transition duration-300
-                  shadow-lg
-                  font-semibold
-                "
-              >
+<p
+className="
+text-red-500
+font-black
+text-5xl
+"
+>
 
-                View GitHub
+{String(project.id).padStart(2,"0")}
 
-                <TbExternalLink size={20} />
+</p>
 
-              </a>
+<h3
+className="
+text-3xl
+font-bold
+mt-3
+"
+>
 
-            </div>
+{project.title}
 
-          </motion.div>
+</h3>
 
-        ))}
 
-      </div>
+<p
+className="
+text-gray-600
+leading-8
+mt-5
+"
+>
 
-    </div>
-  );
+{project.description}
+
+</p>
+
+
+<div
+className="
+flex
+gap-3
+flex-wrap
+mt-6
+"
+>
+
+{project.stack.map((tech,i)=>(
+
+<span
+key={i}
+
+className="
+px-4
+py-2
+rounded-full
+bg-red-50
+text-red-500
+text-sm
+font-medium
+border
+"
+>
+
+{tech}
+
+</span>
+
+))}
+
+</div>
+
+
+<a
+href={project.link}
+target="_blank"
+rel="noreferrer"
+
+className="
+mt-8
+inline-flex
+items-center
+gap-2
+bg-red-500
+hover:bg-red-600
+text-white
+px-6
+py-3
+rounded-xl
+font-semibold
+shadow-lg
+duration-300
+hover:scale-105
+"
+>
+
+View Github
+
+<TbExternalLink />
+
+</a>
+
+</div>
+
+</motion.div>
+
+))}
+
+</div>
+
+</div>
+
+</section>
+
+);
+
 }
