@@ -11,10 +11,40 @@ export default function Home() {
 
     <div
       id="home"
-      className="mt-20 bg-gradient-to-b from-white via-gray-50 to-white text-black"
+      className="
+      mt-20
+      min-h-screen
+      text-black
+      bg-cover
+      bg-center
+      bg-no-repeat
+      relative
+      overflow-hidden
+      "
+      style={{
+        backgroundImage: "url('/assets/HomeImage.png')"
+      }}
     >
 
-      <div className="flex justify-between py-10 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse gap-6">
+      {/* SOFT PROFESSIONAL OVERLAY */}
+      <div className="absolute inset-0 bg-white/20"></div>
+
+      {/* LIGHT PROFESSIONAL GRADIENT */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/10 to-transparent"></div>
+
+      <div className="
+      relative z-10
+      flex
+      justify-between
+      py-10
+      items-center
+      px-5
+      lg:px-28
+      lg:flex-row
+      flex-col-reverse
+      gap-6
+      min-h-screen
+      ">
 
         {/* LEFT */}
         <motion.div
@@ -47,7 +77,18 @@ export default function Home() {
               }}
             >
 
-              <span className="bg-red-50 text-red-500 px-5 py-2 rounded-full text-sm font-semibold">
+              <span className="
+              bg-white/70
+              backdrop-blur-md
+              text-red-500
+              px-5
+              py-2
+              rounded-full
+              text-sm
+              font-semibold
+              shadow-md
+              border border-white/50
+              ">
 
                 MCA Student • Software Engineer
 
@@ -57,7 +98,7 @@ export default function Home() {
 
             {/* NAME */}
             <motion.h2
-              className="text-xl lg:text-3xl font-medium"
+              className="text-xl lg:text-3xl font-medium text-black"
               variants={{
                 hidden: { opacity: 0 },
                 visible: { opacity: 1 }
@@ -89,7 +130,13 @@ export default function Home() {
 
             {/* MAIN TITLE */}
             <motion.h1
-              className="font-black text-5xl lg:text-7xl leading-tight"
+              className="
+              font-black
+              text-5xl
+              lg:text-7xl
+              leading-tight
+              text-black
+              "
               variants={{
                 hidden: { opacity: 0 },
                 visible: { opacity: 1 }
@@ -110,7 +157,7 @@ export default function Home() {
 
             {/* SUBTITLE */}
             <motion.h2
-              className="text-lg lg:text-2xl text-gray-600"
+              className="text-lg lg:text-2xl text-gray-700 font-medium"
               variants={{
                 hidden: { opacity: 0 },
                 visible: { opacity: 1 }
@@ -125,7 +172,13 @@ export default function Home() {
 
           {/* DESCRIPTION */}
           <motion.p
-            className="text-gray-500 text-base mt-8 leading-8"
+            className="
+            text-gray-700
+            text-base
+            mt-8
+            leading-8
+            max-w-2xl
+            "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: .5 }}
@@ -159,7 +212,7 @@ export default function Home() {
               py-4
               rounded-2xl
               font-semibold
-              shadow-lg
+              shadow-xl
               duration-300
               hover:scale-105
               "
@@ -183,10 +236,11 @@ export default function Home() {
               href="mailto:tanu10162005@gmail.com"
               className="
               p-4
-              bg-white
+              bg-white/70
+              backdrop-blur-md
               rounded-full
               shadow-lg
-              border
+              border border-white/50
               hover:scale-110
               hover:text-red-500
               duration-300
@@ -203,10 +257,11 @@ export default function Home() {
               rel="noreferrer"
               className="
               p-4
-              bg-white
+              bg-white/70
+              backdrop-blur-md
               rounded-full
               shadow-lg
-              border
+              border border-white/50
               hover:scale-110
               hover:text-red-500
               duration-300
@@ -223,10 +278,11 @@ export default function Home() {
               rel="noreferrer"
               className="
               p-4
-              bg-white
+              bg-white/70
+              backdrop-blur-md
               rounded-full
               shadow-lg
-              border
+              border border-white/50
               hover:scale-110
               hover:text-red-500
               duration-300
@@ -241,28 +297,8 @@ export default function Home() {
 
         </motion.div>
 
-        {/* RIGHT IMAGE */}
-        <motion.div
-          className="lg:w-[50%] flex justify-center"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-
-          <img
-            src="/assets/Anime.gif"
-            alt="anime"
-            className="
-            h-[300px]
-            lg:h-[520px]
-            object-contain
-            drop-shadow-2xl
-            select-none
-            pointer-events-none
-            "
-          />
-
-        </motion.div>
+        {/* RIGHT SIDE EMPTY */}
+        <div className="lg:w-[50%]"></div>
 
       </div>
 

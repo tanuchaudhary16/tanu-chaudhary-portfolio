@@ -20,20 +20,6 @@ link:"https://github.com/tanuchaudhary16/smart-city-management-system"
 
 {
 id:2,
-title:"Human Suspicious Activity Recognition System",
-
-description:
-"Built an AI-powered surveillance system capable of detecting suspicious human activities using computer vision and deep learning techniques.",
-
-stack:["Python","Computer Vision","Deep Learning"],
-
-image:"/assets/suspicious.png",
-
-link:"#"
-},
-
-{
-id:3,
 title:"Crime Prediction System",
 
 description:
@@ -47,7 +33,7 @@ link:"https://github.com/tanuchaudhary16/Crime-Prediction-System"
 },
 
 {
-id:4,
+id:3,
 title:"Real-Time Disaster Monitoring & Response System",
 
 description:
@@ -61,7 +47,7 @@ link:"https://github.com/tanuchaudhary16/Real-Time-Disaster-Prediction-and-Respo
 },
 
 {
-id:5,
+id:4,
 title:"NeuroNudge",
 
 description:
@@ -75,7 +61,7 @@ link:"https://github.com/tanuchaudhary16/NeuroNudge"
 },
 
 {
-id:6,
+id:5,
 title:"AI Desktop Partner",
 
 description:
@@ -86,6 +72,20 @@ stack:["Python","AI"],
 image:"/assets/aidesktop.jfif",
 
 link:"https://github.com/tanuchaudhary16/AI-DESKTOP-PARTNER"
+},
+
+{
+id:6,
+title:"Human Suspicious Activity Recognition System",
+
+description:
+"Built an AI-powered surveillance system capable of detecting suspicious human activities using computer vision and deep learning techniques.",
+
+stack:["Python","Computer Vision","Deep Learning"],
+
+image:"/assets/suspicious.png",
+
+link:""
 }
 
 ];
@@ -276,6 +276,7 @@ border
 
 </div>
 
+{project.link && (
 
 <a
 href={project.link}
@@ -305,6 +306,8 @@ View Github
 <TbExternalLink />
 
 </a>
+
+)}
 
 </div>
 
