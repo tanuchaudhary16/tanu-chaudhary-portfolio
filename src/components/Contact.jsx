@@ -10,11 +10,10 @@ import { FaPhone } from "react-icons/fa6";
 
 export default function Contact() {
 
-const ref=useRef(null);
+const ref = useRef(null);
+const form = useRef();
 
-const form=useRef();
-
-const isInView=useInView(ref,{
+const isInView = useInView(ref,{
 once:true,
 amount:.2
 });
@@ -117,7 +116,7 @@ mx-auto
 "
 >
 
-Actively seeking Software Engineering opportunities, internships and collaborations.
+Actively seeking Software Engineering, AI/ML Engineering opportunities, internships and collaborations.
 
 </p>
 
@@ -154,9 +153,7 @@ className="w-full lg:w-[48%]"
 >
 
 <form
-
 ref={form}
-
 onSubmit={sendEmail}
 
 className="
@@ -167,7 +164,6 @@ border
 p-8
 space-y-5
 "
-
 >
 
 <input
@@ -224,9 +220,8 @@ required
 
 <motion.button
 whileHover={{
-scale:1.05
+scale:1.03
 }}
-
 type="submit"
 
 className="
@@ -246,8 +241,7 @@ Send Message
 
 </motion.button>
 
-
-{successMessage &&(
+{successMessage && (
 
 <p className="
 font-semibold
@@ -264,45 +258,41 @@ text-center
 <div className="
 flex
 justify-center
-gap-6
-pt-4
+gap-8
+pt-5
 ">
 
-<motion.a
+<a
 href="mailto:tanu10162005@gmail.com"
-whileHover={{scale:1.2}}
-className="text-red-500"
+title="Send Email"
+className="text-red-500 hover:scale-110 duration-300"
 >
 
 <BiLogoGmail className="text-3xl"/>
 
-</motion.a>
+</a>
 
-
-<motion.a
+<a
 href="https://github.com/tanuchaudhary16"
 target="_blank"
 rel="noreferrer"
-whileHover={{scale:1.2}}
-className="text-red-500"
+className="text-red-500 hover:scale-110 duration-300"
 >
 
 <BsGithub className="text-3xl"/>
 
-</motion.a>
+</a>
 
-
-<motion.a
+<a
 href="https://www.linkedin.com/in/tanuchaudhary16/"
 target="_blank"
 rel="noreferrer"
-whileHover={{scale:1.2}}
-className="text-red-500"
+className="text-red-500 hover:scale-110 duration-300"
 >
 
 <IoLogoLinkedin className="text-3xl"/>
 
-</motion.a>
+</a>
 
 </div>
 
@@ -332,27 +322,31 @@ opacity:1
 className="lg:w-[42%]"
 >
 
-<h2 className="
+<h2
+className="
 text-5xl
 font-black
 leading-tight
-">
+"
+>
 
-Interested in working{" "}
+Interested in building{" "}
 
 <span className="text-red-500">
-together?
+AI + Software solutions?
 </span>
 
 </h2>
 
-<p className="
+<p
+className="
 text-gray-600
 leading-8
 mt-6
-">
+"
+>
 
-Feel free to reach out regarding software engineering roles, internships, collaborations or interesting discussions.
+Open to Software Engineering, Backend Development, AI/ML Engineering opportunities, internships and technical collaborations.
 
 </p>
 
@@ -364,6 +358,7 @@ mt-10
 
 <a
 href="mailto:tanu10162005@gmail.com"
+
 className="
 bg-white
 border
@@ -376,16 +371,17 @@ gap-5
 hover:shadow-2xl
 hover:-translate-y-1
 duration-300
-cursor-pointer
 "
 >
 
-<div className="
+<div
+className="
 bg-red-50
 text-red-500
 p-4
 rounded-full
-">
+"
+>
 
 <IoMdMail/>
 
@@ -394,11 +390,15 @@ rounded-full
 <div>
 
 <p className="font-semibold">
+
 Email
+
 </p>
 
 <p className="text-gray-500">
+
 tanu10162005@gmail.com
+
 </p>
 
 </div>
@@ -409,6 +409,7 @@ tanu10162005@gmail.com
 
 <a
 href="tel:+916397113386"
+
 className="
 bg-white
 border
@@ -421,16 +422,17 @@ gap-5
 hover:shadow-2xl
 hover:-translate-y-1
 duration-300
-cursor-pointer
 "
 >
 
-<div className="
+<div
+className="
 bg-red-50
 text-red-500
 p-4
 rounded-full
-">
+"
+>
 
 <FaPhone/>
 
@@ -439,11 +441,15 @@ rounded-full
 <div>
 
 <p className="font-semibold">
-Phone
+
+Call Me
+
 </p>
 
 <p className="text-gray-500">
+
 +91 6397113386
+
 </p>
 
 </div>

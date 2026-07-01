@@ -3,57 +3,93 @@ import { TbExternalLink } from "react-icons/tb";
 import { motion } from "framer-motion";
 
 const projects = [
-
 {
 id:1,
 title:"Smart City Management System",
-
 description:
-"Built a MERN-based platform for complaint resolution and civic service management with optimized backend workflows and real-time complaint tracking.",
-
+"Built a MERN-based civic platform for complaint resolution and real-time service tracking.",
 stack:["MongoDB","Express","React","Node.js"],
-
 image:"/assets/smartcity.png",
-
 link:"https://github.com/tanuchaudhary16/smart-city-management-system"
 },
 
 {
 id:2,
-title:"Crime Prediction System",
-
+title:"Human Suspicious Activity Recognition System",
 description:
-"Developed FastAPI backend pipelines integrated with machine learning models for predictive crime analysis and scalable data processing.",
-
-stack:["FastAPI","Python","Machine Learning"],
-
-image:"/assets/crime.jfif",
-
-link:"https://github.com/tanuchaudhary16/Crime-Prediction-System"
+"AI-powered surveillance system using Computer Vision and Deep Learning to detect suspicious activities.",
+stack:[
+"Python",
+"Computer Vision",
+"Deep Learning",
+"OpenCV",
+"AI"
+],
+image:"/assets/suspicious.png",
+link:"https://github.com/tanuchaudhary16/SigMamba"
 },
 
 {
 id:3,
-title:"Real-Time Disaster Monitoring & Response System",
-
+title:"Crime Prediction System",
 description:
-"Developed scalable backend services for disaster alerts, emergency response coordination and incident handling using Java, Spring Boot and REST APIs.",
-
-stack:["Java","Spring Boot","MySQL","REST APIs"],
-
-image:"/assets/disaster.png",
-
-link:"https://github.com/tanuchaudhary16/Real-Time-Disaster-Prediction-and-Response-System-"
+"FastAPI backend integrated with Machine Learning for predictive crime analytics.",
+stack:[
+"FastAPI",
+"Python",
+"Machine Learning"
+],
+image:"/assets/crime.jfif",
+link:"https://github.com/tanuchaudhary16/Crime-Prediction-System"
 },
 
 {
 id:4,
+title:"Real-Time Disaster Monitoring & Response System",
+description:
+"Backend services for emergency alerts and disaster response coordination.",
+stack:[
+"Java",
+"Spring Boot",
+"MySQL",
+"REST APIs"
+],
+image:"/assets/disaster.png",
+link:"https://github.com/tanuchaudhary16/Real-Time-Disaster-Prediction-and-Response-System-"
+},
+
+{
+id:5,
+title:"Job Prep Application",
+description:
+"Interview preparation platform with ATS resume analysis, resume improvement suggestions, DSA practice, aptitude preparation and Core CS roadmap.",
+
+stack:[
+"React",
+"Node.js",
+"MongoDB",
+"ATS",
+"DSA",
+"System Design"
+],
+
+image:"/assets/jobprep.png",
+
+link:"https://github.com/tanuchaudhary16/placement-preparation-platform"
+},
+
+{
+id:6,
 title:"NeuroNudge",
 
 description:
-"AI-powered recommendation system that analyzes user mood patterns and behavior to recommend personalized activities.",
+"AI recommendation system analyzing mood patterns and behavior for personalized suggestions.",
 
-stack:["AI","Machine Learning","Python"],
+stack:[
+"Python",
+"AI",
+"Machine Learning"
+],
 
 image:"/assets/neuronudge.jfif",
 
@@ -61,33 +97,21 @@ link:"https://github.com/tanuchaudhary16/NeuroNudge"
 },
 
 {
-id:5,
+id:7,
 title:"AI Desktop Partner",
 
 description:
-"Built an intelligent desktop assistant capable of automation, voice interaction and productivity enhancement.",
+"Desktop assistant supporting automation and productivity enhancement.",
 
-stack:["Python","AI"],
+stack:[
+"Python",
+"AI"
+],
 
 image:"/assets/aidesktop.jfif",
 
 link:"https://github.com/tanuchaudhary16/AI-DESKTOP-PARTNER"
-},
-
-{
-id:6,
-title:"Human Suspicious Activity Recognition System",
-
-description:
-"Built an AI-powered surveillance system capable of detecting suspicious human activities using computer vision and deep learning techniques.",
-
-stack:["Python","Computer Vision","Deep Learning"],
-
-image:"/assets/suspicious.png",
-
-link:""
 }
-
 ];
 
 export default function Projects() {
@@ -135,9 +159,7 @@ leading-relaxed
 "
 >
 
-Software engineering, AI and full-stack applications
-built through practical development and real-world
-problem solving.
+Software Engineering, AI/ML and Full-Stack projects.
 
 </p>
 
@@ -181,7 +203,7 @@ lg:w-[520px]
 overflow-hidden
 rounded-3xl
 bg-white
-shadow-[0_15px_45px_rgba(0,0,0,.08)]
+shadow-xl
 border
 "
 >
@@ -200,7 +222,6 @@ duration-500
 />
 
 </div>
-
 
 <div className="lg:w-1/2">
 
@@ -228,7 +249,6 @@ mt-3
 
 </h3>
 
-
 <p
 className="
 text-gray-600
@@ -240,7 +260,6 @@ mt-5
 {project.description}
 
 </p>
-
 
 <div
 className="
@@ -276,8 +295,6 @@ border
 
 </div>
 
-{project.link && (
-
 <a
 href={project.link}
 target="_blank"
@@ -306,8 +323,6 @@ View Github
 <TbExternalLink />
 
 </a>
-
-)}
 
 </div>
 

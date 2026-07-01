@@ -26,10 +26,8 @@ export default function Home() {
       }}
     >
 
-      {/* SOFT PROFESSIONAL OVERLAY */}
       <div className="absolute inset-0 bg-white/20"></div>
 
-      {/* LIGHT PROFESSIONAL GRADIENT */}
       <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/10 to-transparent"></div>
 
       <div className="
@@ -46,7 +44,6 @@ export default function Home() {
       min-h-screen
       ">
 
-        {/* LEFT */}
         <motion.div
           className="lg:w-[48%]"
           initial={{ opacity: 0, x: -60 }}
@@ -69,7 +66,6 @@ export default function Home() {
             }}
           >
 
-            {/* TOP TAG */}
             <motion.div
               variants={{
                 hidden: { opacity: 0 },
@@ -77,26 +73,28 @@ export default function Home() {
               }}
             >
 
-              <span className="
-              bg-white/70
-              backdrop-blur-md
-              text-red-500
-              px-5
-              py-2
-              rounded-full
-              text-sm
-              font-semibold
-              shadow-md
-              border border-white/50
-              ">
+              <span
+                className="
+                bg-white/70
+                backdrop-blur-md
+                text-red-500
+                px-5
+                py-2
+                rounded-full
+                text-sm
+                font-semibold
+                shadow-md
+                border border-white/50
+                "
+              >
 
-                MCA Student • Software Engineer
+                MCA Student • Software + AI/ML Engineer
 
               </span>
 
             </motion.div>
 
-            {/* NAME */}
+
             <motion.h2
               className="text-xl lg:text-3xl font-medium text-black"
               variants={{
@@ -113,12 +111,16 @@ export default function Home() {
                   sequence={[
                     "Tanu Chaudhary",
                     1500,
+                    "Software Engineer",
+                    1500,
+                    "AI Engineer",
+                    1500,
+                    "ML Engineer",
+                    1500,
                     "Backend Developer",
                     1500,
                     "Problem Solver",
-                    1500,
-                    "Software Engineer",
-                    1500,
+                    1500
                   ]}
                   speed={40}
                   repeat={Infinity}
@@ -128,7 +130,7 @@ export default function Home() {
 
             </motion.h2>
 
-            {/* MAIN TITLE */}
+
             <motion.h1
               className="
               font-black
@@ -143,7 +145,7 @@ export default function Home() {
               }}
             >
 
-              Building Modern
+              Building Intelligent
 
               <span className="text-red-500">
                 {" "}Software
@@ -151,11 +153,11 @@ export default function Home() {
 
               <br />
 
-              Solutions
+              & AI Solutions
 
             </motion.h1>
 
-            {/* SUBTITLE */}
+
             <motion.h2
               className="text-lg lg:text-2xl text-gray-700 font-medium"
               variants={{
@@ -170,7 +172,7 @@ export default function Home() {
 
           </motion.div>
 
-          {/* DESCRIPTION */}
+
           <motion.p
             className="
             text-gray-700
@@ -184,14 +186,15 @@ export default function Home() {
             transition={{ delay: .5 }}
           >
 
-            Passionate Software Engineer with strong foundations in
-            Data Structures, Algorithms, OOP, DBMS and System Design.
-            Experienced in backend systems, REST APIs, full-stack
-            applications and solving real-world problems through technology.
+            Passionate Software & AI/ML Engineer with strong foundations in
+            Data Structures, Algorithms, OOP, DBMS, System Design and Machine Learning.
+            Experienced in backend systems, REST APIs, full-stack development,
+            Deep Learning, Computer Vision and building intelligent applications
+            to solve real-world problems.
 
           </motion.p>
 
-          {/* BUTTON */}
+
           <motion.div
             className="flex gap-5 mt-10 flex-wrap"
             initial={{ opacity: 0 }}
@@ -224,7 +227,7 @@ export default function Home() {
 
           </motion.div>
 
-          {/* SOCIALS */}
+
           <motion.div
             className="flex gap-5 mt-10"
             initial={{ opacity: 0 }}
@@ -246,9 +249,7 @@ export default function Home() {
               duration-300
               "
             >
-
               <BiLogoGmail size={24} />
-
             </a>
 
             <a
@@ -267,9 +268,7 @@ export default function Home() {
               duration-300
               "
             >
-
               <IoLogoLinkedin size={24} />
-
             </a>
 
             <a
@@ -288,16 +287,13 @@ export default function Home() {
               duration-300
               "
             >
-
               <BsGithub size={24} />
-
             </a>
 
           </motion.div>
 
         </motion.div>
 
-        {/* RIGHT SIDE EMPTY */}
         <div className="lg:w-[50%]"></div>
 
       </div>

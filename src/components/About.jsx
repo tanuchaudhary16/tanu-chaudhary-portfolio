@@ -72,12 +72,12 @@ export default function About() {
             px-4
             py-2
             rounded-full
-            bg-green-100
-            text-green-700
+            bg-purple-100
+            text-purple-700
             text-sm
             font-medium
             ">
-              Open to Software Engineering Opportunities
+              Open to AI/ML Engineer Opportunities
             </span>
 
           </motion.div>
@@ -107,20 +107,20 @@ export default function About() {
             <span className="font-bold">
               VIT Chennai
             </span>.
-
-            I am passionate about software engineering and enjoy building scalable applications that solve real-world challenges.
-
-          </p>
-
-          <p className="text-gray-600 leading-8 text-lg mt-6">
-
-            My interests include backend systems, distributed architectures, APIs and scalable application design. I have strong foundations in Data Structures, Algorithms, Object-Oriented Programming, DBMS and System Design.
+            
+            I am passionate about Artificial Intelligence and Machine Learning, focusing on building intelligent systems that solve real-world problems.
 
           </p>
 
           <p className="text-gray-600 leading-8 text-lg mt-6">
 
-            I continuously improve through coding practice, project development and hands-on learning experiences. I enjoy solving challenging problems and building efficient software solutions.
+            My interests include Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, Generative AI, and Data Analysis. I have strong foundations in Python, Data Structures, Algorithms, Statistics, and AI model development.
+
+          </p>
+
+          <p className="text-gray-600 leading-8 text-lg mt-6">
+
+            I continuously enhance my skills through AI projects, research, coding practice, and hands-on experimentation with modern ML frameworks and technologies.
 
           </p>
 
@@ -130,11 +130,11 @@ export default function About() {
             <div className="bg-white rounded-2xl p-5 shadow-lg border hover:-translate-y-2 duration-300">
 
               <h3 className="font-bold text-red-500">
-                Backend Development
+                Machine Learning
               </h3>
 
               <p className="text-gray-500 mt-2">
-                Building scalable APIs and backend systems using Spring Boot, FastAPI and MERN.
+                Developing predictive models using supervised and unsupervised learning techniques.
               </p>
 
             </div>
@@ -143,11 +143,11 @@ export default function About() {
             <div className="bg-white rounded-2xl p-5 shadow-lg border hover:-translate-y-2 duration-300">
 
               <h3 className="font-bold text-red-500">
-                Problem Solving
+                Deep Learning
               </h3>
 
               <p className="text-gray-500 mt-2">
-                Strong understanding of DSA and solving real-world engineering challenges.
+                Building neural network models for computer vision, NLP, and intelligent automation.
               </p>
 
             </div>
@@ -156,11 +156,11 @@ export default function About() {
             <div className="bg-white rounded-2xl p-5 shadow-lg border hover:-translate-y-2 duration-300">
 
               <h3 className="font-bold text-red-500">
-                Software Engineering
+                Generative AI
               </h3>
 
               <p className="text-gray-500 mt-2">
-                Focused on writing maintainable, efficient and scalable code.
+                Exploring LLMs, prompt engineering, AI agents, and modern generative AI applications.
               </p>
 
             </div>
@@ -169,11 +169,11 @@ export default function About() {
             <div className="bg-white rounded-2xl p-5 shadow-lg border hover:-translate-y-2 duration-300">
 
               <h3 className="font-bold text-red-500">
-                System Design
+                Data Science
               </h3>
 
               <p className="text-gray-500 mt-2">
-                Interested in scalable architectures and distributed systems.
+                Working with data preprocessing, visualization, feature engineering, and model evaluation.
               </p>
 
             </div>
